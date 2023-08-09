@@ -3,7 +3,8 @@ const mongoose = require('mongoose')
 const doctorSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        
     },
     email: {
         type: String,
@@ -15,13 +16,38 @@ const doctorSchema = new mongoose.Schema({
         required: true,
         unque: true
     },
-    image: {},
-    doctorId: {},
-    department: {},
-    qualification: {},
-    description: {},
-    experience: {},
-    address: {}
+    image: {
+        type: Object,
+        default: { 
+            url: "https://tse4.mm.bing.net/th?id=OIP.KtahHX0mDy-mEQO16gKJdAAAAA&pid=Api&P=0&h=180" }
+    },
+    doctorId: {
+        type: String,
+        unque: true,
+        default: ""
+    },
+    department: {
+        type: String,
+        default: ""
+    },
+    qualification: {
+        type: String,
+        default: ""
+    },
+    description: {
+        type: String,
+        default: ""
+    },
+    experience: {
+        type: Number,
+        default: 0
+    },
+    address: {
+        type: Object,
+        default: {
+            city: "test city"
+        }
+    }
 },{
     collection: "doctors",
     timestamps: true

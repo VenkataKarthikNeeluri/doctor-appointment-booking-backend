@@ -27,8 +27,7 @@ const userSchema = new mongoose.Schema({
         image: {
             type: Object,
             default: { 
-                url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fkoyimmigration.com%2Ftimeline-category%2Fteam%2F&psig=AOvVaw2rZj6t-HLyRbon7RwhbMzl&ust=1690876938421000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJCcyc-9uIADFQAAAAAdAAAAABAo"
-        }
+                url: "https://tse4.mm.bing.net/th?id=OIP.KtahHX0mDy-mEQO16gKJdAAAAA&pid=Api&P=0&h=180" }
         },
         address: {
             type: Object,
