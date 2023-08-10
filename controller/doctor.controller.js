@@ -9,7 +9,7 @@ const getDoctors = async (req,res) => {
         let doctors = await Doctor.find({})
         res.status(StatusCodes.OK).json({ length: doctors.length, doctors })
     } catch (err) {
-        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ mag: err.message })
+        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: err.message })
     }
 }
 
@@ -22,7 +22,7 @@ const getSingleDoctor = async (req,res) => {
                 return res.status(StatusCodes.NOT_FOUND).json({ msg: "Requested doctor id not found"})
         res.status(StatusCodes.OK).json({ doctor: extDoc })
     } catch (err) {
-        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ mag: err.message })
+        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: err.message })
     }
 }
 
@@ -46,7 +46,7 @@ const addDoctor = async (req,res) => {
 
         res.status(StatusCodes.OK).json({ msg: " doctor details added successfully"})
     } catch (err) {
-        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ mag: err.message })
+        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: err.message })
     }
 }
 
@@ -69,7 +69,7 @@ const updateDoctor = async (req,res) => {
 
         res.status(StatusCodes.OK).json({ msg: "doctor info updateed successfully"})
     } catch (err) {
-        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ mag: err.message })
+        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: err.message })
     }
 }
 
@@ -87,7 +87,7 @@ const deleteDoctor = async (req,res) => {
 
         res.status(StatusCodes.OK).json({ msg: "doctor info deleted successfully"})
     } catch (err) {
-        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ mag: err.message })
+        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: err.message })
     }
 }
 

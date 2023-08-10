@@ -7,7 +7,7 @@ const getAppointments = async (req,res) => {
     try{
         res.status(StatusCodes.OK).json({ msg: "get appointments"})
     } catch (err) {
-        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ mag: err.message })
+        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: err.message })
     }
 }
 
@@ -16,7 +16,7 @@ const getSingleAppointment = async (req,res) => {
     try{
         res.status(StatusCodes.OK).json({ msg: "get single appointment"})
     } catch (err) {
-        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ mag: err.message })
+        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: err.message })
     }
 }
 
@@ -25,7 +25,7 @@ const addAppointment = async (req,res) => {
     try{
         res.status(StatusCodes.OK).json({ msg: "add appointment"})
     } catch (err) {
-        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ mag: err.message })
+        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: err.message })
     }
 }
 
@@ -34,7 +34,7 @@ const updateAppointment = async (req,res) => {
     try{
         res.status(StatusCodes.OK).json({ msg: "update appointment"})
     } catch (err) {
-        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ mag: err.message })
+        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: err.message })
     }
 }
 
@@ -43,7 +43,7 @@ const deleteAppointment = async (req,res) => {
     try{
         res.status(StatusCodes.OK).json({ msg: "delete appointment"})
     } catch (err) {
-        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ mag: err.message })
+        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: err.message })
     }
 }
 

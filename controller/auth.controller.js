@@ -28,7 +28,7 @@
             return res.status(StatusCodes.OK).json({ msg: `user registered successfully`,newUser })
 
         } catch (err) {
-            res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ mag: err.message })
+            res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: err.message })
         }
     }
 // logic
@@ -62,7 +62,7 @@ const login = async (req,res) => {
 
             res.status(StatusCodes.OK).json({ msg: "Login Successfully", accessToken })
         } catch (err) {
-            res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ mag: err.message })
+            res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: err.message })
         }
     }
 // logout
@@ -73,7 +73,7 @@ const logout = async (req,res) => {
             })
             res.status(StatusCodes.OK).json({ msg: "logout success"})
         } catch (err) {
-            res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ mag: err.message })
+            res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: err.message })
         }
     }
 // token
@@ -95,7 +95,7 @@ const getToken = async (req,res) => {
         
            // res.status(StatusCodes.OK).json({ fToken })
         } catch (err) {
-            res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ mag: err.message })
+            res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: err.message })
         }
     }
 // current logged user info
@@ -107,7 +107,7 @@ const loggedUser = async (req,res) => {
 
             res.status(StatusCodes.OK).json({ user })
         } catch (err) {
-            res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ mag: err.message })
+            res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: err.message })
         }
     }
 
